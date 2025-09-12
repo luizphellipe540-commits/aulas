@@ -1,0 +1,13 @@
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# SPA fallback so Vite/React router works on refresh and direct links
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
